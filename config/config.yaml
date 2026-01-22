@@ -1,0 +1,33 @@
+# Configuration file for Distributed Log Processing System
+
+# Spark Configuration
+spark:
+  app_name: "DistributedLogProcessor"
+  master: "local[*]"
+  executor_memory: "2g"
+  driver_memory: "1g"
+  max_result_size: "1g"
+
+# Data Paths
+paths:
+  raw_logs_dir: "data/raw_logs"
+  reports_csv_dir: "reports/csv"
+  reports_json_dir: "reports/json"
+  parquet_dir: "data/processed"
+
+# Alert Thresholds
+alerts:
+  error_rate_threshold: 0.1  # 10% error rate
+  critical_error_count: 5    # Alert if 5+ critical errors
+  error_count_threshold: 100  # Alert if total errors exceed this
+
+# Analytics Configuration
+analytics:
+  top_n_errors: 10
+  time_window_hours: 24
+
+# Dashboard Configuration
+dashboard:
+  auto_refresh_seconds: 30
+  max_alerts_display: 20
+

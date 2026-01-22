@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & logs
+data/
+reports/
+*.parquet
+*.db
+
+# OS
+.DS_Store
